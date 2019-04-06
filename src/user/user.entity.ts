@@ -11,10 +11,10 @@ export class User {
   })
   id: string;
 
-  @Column({
-    default:''
-  })
-  phone: string;
+  // @Column({
+  //   default:''
+  // })
+  // phone: string;
 
   // 已用次数
   @Column({

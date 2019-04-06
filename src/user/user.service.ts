@@ -25,4 +25,9 @@ export class UserService {
     return await this.userRepository.find();
   }  
 
-}
+   async update(id: string, user: User): Promise<User> {
+    let userToUpdate =  await this.userRepository.findOne({ id });
+    Object.assign(userToUpdate,user);
+     return await this.userRepository.save(userToUpdate);
+   }
+  }
