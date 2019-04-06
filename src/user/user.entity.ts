@@ -11,18 +11,35 @@ export class User {
   @Column()
   phone: string;
 
-  @Column()
+  // 已用次数
+  @Column({
+    type: 'int',
+    default:0
+  })
+  times: number;
+
+  @Column({
+    default: false
+  })
   Africa: boolean;
 
-  @Column()
+  @Column({
+    default: false
+  })
   Asia: boolean;
 
-  @Column()
+  @Column({
+    default: false
+  })
   Oceania: boolean;
 
-  @Column()
+  @Column({
+    default: false
+  })
   Europe: boolean;
 
-  @Column()
+  @Column({
+    default: false
+  })
   America: boolean;
 }
