@@ -11,12 +11,13 @@ export class UserService {
   ) {}
 
 
-  create(user: User) {
-    console.log('user', user)
+  create(id: string) {
+    let user = new User();
+    user.id = id
     this.userRepository.save(user)
   }
 
-  async findOne(id: number): Promise<any> {
+  async findOne(id: string): Promise<any> {
     return await this.userRepository.findOne({ id });
   }
 

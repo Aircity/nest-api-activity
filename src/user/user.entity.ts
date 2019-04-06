@@ -5,10 +5,15 @@ export class User {
   @PrimaryGeneratedColumn()
   uid: number;
 
-  @Column()
-  id: number;
+  // token
+  @Column({
+    unique: true    
+  })
+  id: string;
 
-  @Column()
+  @Column({
+    default:''
+  })
   phone: string;
 
   // 已用次数
