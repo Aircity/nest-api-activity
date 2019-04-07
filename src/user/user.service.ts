@@ -10,11 +10,10 @@ export class UserService {
     private readonly userRepository: Repository<User>,
   ) {}
 
-
   create(id: string) {
     let user = new User();
-    user.id = id
-    this.userRepository.save(user)
+    user.id = id;
+    this.userRepository.save(user);
   }
 
   async findOne(id: string): Promise<any> {
@@ -23,11 +22,21 @@ export class UserService {
 
   async findAll(): Promise<User[]> {
     return await this.userRepository.find();
-  }  
-
-   async update(id: string, user: User): Promise<User> {
-    let userToUpdate =  await this.userRepository.findOne({ id });
-    Object.assign(userToUpdate,user);
-     return await this.userRepository.save(userToUpdate);
-   }
   }
+
+  async query(category: string): Promise<any> {
+    let query = {};
+    query[category] = true;
+    const [list, count] = await this.userRepository.findAndCount(query);
+    return {
+      list,
+      count,
+    };
+  }
+
+  async update(id: string, user: User): Promise<User> {
+    let userToUpdate = await this.userRepository.findOne({ id });
+    Object.assign(userToUpdate, user);
+    return await this.userRepository.save(userToUpdate);
+  }
+}
