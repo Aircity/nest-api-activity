@@ -22,30 +22,30 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
-    "@nestjs/common": "^6.0.0",
-    "@nestjs/core": "^6.0.0",
-    "@nestjs/platform-express": "^6.0.5",
-    "@nestjs/typeorm": "^6.0.0",
-    "reflect-metadata": "^0.1.12",
-    "rimraf": "^2.6.2",
-    "rxjs": "^6.3.3",
-    "sqlite3": "^4.0.6",
-    "typeorm": "^0.2.16"
+    "@nestjs/common": "^6.3.2",
+    "@nestjs/core": "^6.3.2",
+    "@nestjs/platform-express": "^6.3.2",
+    "@nestjs/typeorm": "^6.1.2",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^2.6.3",
+    "rxjs": "^6.5.2",
+    "sqlite3": "^4.0.9",
+    "typeorm": "^0.2.18"
   },
   "devDependencies": {
-    "@nestjs/testing": "^6.0.0",
-    "@types/jest": "^23.3.13",
-    "@types/node": "^10.12.18",
+    "@nestjs/testing": "^6.3.2",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
     "@types/supertest": "^2.0.7",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.9",
-    "prettier": "^1.15.3",
-    "supertest": "^3.4.1",
-    "ts-jest": "^23.10.5",
-    "ts-node": "^7.0.1",
-    "tsconfig-paths": "^3.7.0",
-    "tslint": "5.12.1",
-    "typescript": "^3.2.4"
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   },
   "jest": {
     "moduleFileExtensions": [
